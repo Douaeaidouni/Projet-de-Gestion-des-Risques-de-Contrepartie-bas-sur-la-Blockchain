@@ -1,0 +1,72 @@
+/* style.css */
+
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Section des formulaires */
+h2 {
+    color: #2980b9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Entrées et boutons */
+input[type="text"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Spécificité des boutons */
+button {
+    background-color: #2980b9;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Risque</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.1/web3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gestionnaire de Risque</h1>
+
+        <h2>Ajouter une Contrepartie</h2>
+        <input type="text" id="portefeuille" placeholder="Adresse du portefeuille" />
+        <input type="number" id="scoreCredit" placeholder="Score de Crédit" />
+        <input type="number" id="limiteExposition" placeholder="Limite d'Exposition" />
+        <input type="number" id="collateral" placeholder="Montant Collatéral" />
+        <button onclick="ajouterContrepartie()">Ajouter Contrepartie</button>
+
+        <h2>Mettre à Jour l'Exposition</h2>
+        <input type="text" id="portefeuilleExposition" placeholder="Adresse du portefeuille" />
+        <input type="number" id="montantExposition" placeholder="Montant" />
+        <button onclick="mettreAJourExposition(true)">Ajouter Exposition</button>
+        <button onclick="mettreAJourExposition(false)">Retirer Exposition</button>
+
+        <h2>Mettre à Jour le Collatéral</h2>
+        <input type="text" id="portefeuilleCollateral" placeholder="Adresse du portefeuille" />
+        <input type="number" id="montantCollateral" placeholder="Montant" />
+        <button onclick="mettreAJourCollateral(true)">Ajouter Collatéral</button>
+        <button onclick="mettreAJourCollateral(false)">Retirer Collatéral</button>
+
+        <h2>Mettre à Jour le Score de Crédit</h2>
+        <input type="text" id="portefeuilleScore" placeholder="Adresse du portefeuille" />
+        <input type="number" id="nouveauScoreCredit" placeholder="Nouveau Score de Crédit" />
+        <button onclick="mettreAJourScoreCredit()">Mettre à Jour Score de Crédit</button>
+
+        <h2>Gérer la Contrepartie</h2>
+        <button onclick="desactiverContrepartie()">Désactiver Contrepartie</button>
+        <button onclick="reactiverContrepartie()">Réactiver Contrepartie</button>
+
+        <h2>Calculer le Taux de Couverture</h2>
+        <input type="text" id="portefeuilleTaux" placeholder="Adresse du portefeuille" />
+        <button onclick="calculerTauxCouverture()">Calculer Taux de Couverture</button>
+        <p id="tauxCouvertureResult"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
